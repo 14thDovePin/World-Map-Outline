@@ -1,0 +1,9 @@
+Initial Commit
+
+- Added the folowing files:
+  1 .gitignore
+  2 COMMITLOGS.txt
+  3 LICENSE
+  4 README.md
+- Licese Used: MIT License
+- `COMMITLOGS.txt` contains every commit messages ever made.
