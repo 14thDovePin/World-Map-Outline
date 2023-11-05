@@ -1,6 +1,13 @@
+Listed all `Polygon`s inside main.
+
+- Printed the length of the list.
+
+
+
 Opened the shape assets.
 
 - Printed the geoseries of both Land & Minor Islands datasets.
+
 
 
 Added main file and some assets.
