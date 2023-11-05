@@ -1,6 +1,7 @@
 from shapely import Polygon, MultiPolygon
 
 import geopandas as gp
+import matplotlib.pyplot as plt
 
 
 LAND_DATASET_DIR = ".\\assets\\ne_10m_land.shp"
@@ -17,6 +18,7 @@ def main(include_minor=True):
 
     polygons = []
 
+    # Pull polygons from Land.
     for polygon in lgs:
         if type(polygon) is Polygon:
             polygons.append(polygon)
@@ -24,6 +26,7 @@ def main(include_minor=True):
             for i in polygon.geoms:
                 polygons.append(i)
 
+    # Pull polygons from Minor Islands.
     if include_minor:
         for polygon in migs:
             if type(polygon) is Polygon:
@@ -32,8 +35,28 @@ def main(include_minor=True):
                 for i in polygon.geoms:
                     polygons.append(i)
 
-    print(len(polygons))
+    # Convert Polygon coordinates into x and y series.
+    final = []
+    for polygon in polygons:
+        coordinates = polygon.exterior.coords
+        x, y = [], []
+
+        for cord in coordinates:
+            x.append(cord[0])
+            y.append(cord[1])
+
+        poly_cords = (x, y)
+        final.append(poly_cords)
+
+    print(f'Total Polygons: {len(polygons)}')
+    if not include_minor: print('Excluded Minor Islands')
+
+    print('Plotting Polygons..')
+    for i in final:
+        plt.fill(i[0], i[1])
+    print('Polygons Plotted')
+    plt.show()
 
 
 if __name__ == '__main__':
-    main()
+    main(False)

@@ -1,3 +1,11 @@
+Plotted the Land & Minor Island datasets.
+
+- Refactored code.
+- Converted Land & Minor Island polygons for `matplotlib.pyplot.fill`.
+- Plotted polygons.
+
+
+
 Listed all `Polygon`s inside main.
 
 - Printed the length of the list.
