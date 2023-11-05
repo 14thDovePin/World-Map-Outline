@@ -53,7 +53,12 @@ def main(include_minor=True):
 
     print('Plotting Polygons..')
     for i in final:
-        plt.fill(i[0], i[1])
+        plt.fill(
+            i[0],
+            i[1],
+            edgecolor='black',
+            linewidth=0.05
+            )
     print('Polygons Plotted')
     plt.show()
 
