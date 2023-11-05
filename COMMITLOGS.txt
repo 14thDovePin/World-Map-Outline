@@ -1,3 +1,21 @@
+Added main file and some assets.
+
+- Files added:
+  + `main.py`
+  + `ne_10m_land.cpg`
+  + `ne_10m_land.dbf`
+  + `ne_10m_land.prj`
+  + `ne_10m_land.shp`
+  + `ne_10m_land.shx`
+  + `ne_10m_minor_islands.cpg`
+  + `ne_10m_minor_islands.dbf`
+  + `ne_10m_minor_islands.prj`
+  + `ne_10m_minor_islands.shp`
+  + `ne_10m_minor_islands.shx`
+- Added a basic code block to `main.py`.
+
+
+
 Initial Commit
 
 - Added the folowing files:
