@@ -1,3 +1,8 @@
+Opened the shape assets.
+
+- Printed the geoseries of both Land & Minor Islands datasets.
+
+
 Added main file and some assets.
 
 - Files added:
